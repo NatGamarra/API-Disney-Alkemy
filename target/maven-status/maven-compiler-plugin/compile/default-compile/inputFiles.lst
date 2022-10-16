@@ -4,13 +4,13 @@ D:\Cursos\Java\Proyectos Spring Boot\SpringBoot-Demo\src\main\java\com\demo\Demo
 D:\Cursos\Java\Proyectos Spring Boot\SpringBoot-Demo\src\main\java\com\demo\repository\IUsersRepository.java
 D:\Cursos\Java\Proyectos Spring Boot\SpringBoot-Demo\src\main\java\com\demo\controllers\GenreController.java
 D:\Cursos\Java\Proyectos Spring Boot\SpringBoot-Demo\src\main\java\com\demo\dto\MovieDTO.java
-D:\Cursos\Java\Proyectos Spring Boot\SpringBoot-Demo\src\main\java\com\demo\dto\JwtTDO.java
 D:\Cursos\Java\Proyectos Spring Boot\SpringBoot-Demo\src\main\java\com\demo\context\SwaggerConfig.java
 D:\Cursos\Java\Proyectos Spring Boot\SpringBoot-Demo\src\main\java\com\demo\controllers\CharacterController.java
 D:\Cursos\Java\Proyectos Spring Boot\SpringBoot-Demo\src\main\java\com\demo\entities\Users.java
 D:\Cursos\Java\Proyectos Spring Boot\SpringBoot-Demo\src\main\java\com\demo\dto\CharacterDTO.java
 D:\Cursos\Java\Proyectos Spring Boot\SpringBoot-Demo\src\main\java\com\demo\entities\Character.java
 D:\Cursos\Java\Proyectos Spring Boot\SpringBoot-Demo\src\main\java\com\demo\security\UserDetailsServiceImpl.java
+D:\Cursos\Java\Proyectos Spring Boot\SpringBoot-Demo\src\main\java\com\demo\dto\JwtDTO.java
 D:\Cursos\Java\Proyectos Spring Boot\SpringBoot-Demo\src\main\java\com\demo\repository\ICharacterRepository.java
 D:\Cursos\Java\Proyectos Spring Boot\SpringBoot-Demo\src\main\java\com\demo\service\GenreService.java
 D:\Cursos\Java\Proyectos Spring Boot\SpringBoot-Demo\src\main\java\com\demo\dto\NewUserDTO.java
