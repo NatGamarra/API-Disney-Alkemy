@@ -1,14 +1,10 @@
 package com.demo.entities;
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.Data;
+import com.fasterxml.jackson.annotation.*;
 import lombok.Getter;
 import lombok.Setter;
 import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
-import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
@@ -35,15 +31,17 @@ public class Movie implements Serializable {
 
     @Max(5) @Min(1)
     private int calification;
-    @JsonIgnoreProperties("movies")
+
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name="movie_character",
-    joinColumns = @JoinColumn(name="movie_id"),
-    inverseJoinColumns = @JoinColumn(name="character_id"))
+                joinColumns = @JoinColumn(name="movie_id"),
+                inverseJoinColumns = @JoinColumn(name="character_id"))
+    @JsonIgnoreProperties("movies")
     private Set<Character> characters = new HashSet<>();
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn (name="genre_id", referencedColumnName = "idGenre")
+    @JsonIgnoreProperties(value = {"applications", "hibernateLazyInitializer"})
     private Genre genre;
 
     public Movie() {

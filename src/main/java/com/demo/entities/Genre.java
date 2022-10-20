@@ -1,11 +1,9 @@
 package com.demo.entities;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.Setter;
 import javax.persistence.*;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 @Getter @Setter
@@ -20,7 +18,7 @@ public class Genre {
     private String image;
 
     @OneToMany(mappedBy = "genre",fetch = FetchType.LAZY)
-    @JsonIgnoreProperties("genres")
+    @JsonBackReference
     private Set<Movie> movies = new HashSet<>();
 
 
