@@ -11,8 +11,9 @@ public interface IMovieService {
     public void saveMovie(Movie movie);
     public List<MovieDTO> getMovies();
 
-    public Movie findMovie(Long id);
+    public List<Movie> findAllMovies();
 
+    public Movie findMovie(Long id);
 
     public void deleteMovie(Long id);
 

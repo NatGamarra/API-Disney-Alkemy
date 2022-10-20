@@ -19,6 +19,11 @@ public class MovieController {
         return new ResponseEntity<>(iMovieService.getMovies(), HttpStatus.OK);
     }
 
+    @GetMapping("/all")
+    public ResponseEntity<?> findAllMovies(){
+        return new ResponseEntity<>(iMovieService.findAllMovies(), HttpStatus.OK);
+    }
+
     //Buscar pelicula por id
     @GetMapping("/{id}")
     public ResponseEntity<?> findMovie(@PathVariable Long id) {

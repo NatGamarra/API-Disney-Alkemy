@@ -35,6 +35,11 @@ public class MovieService implements IMovieService{
     }
 
     @Override
+    public List<Movie> findAllMovies() {
+        return iMovieRepository.findAll();
+    }
+
+    @Override
     public void saveMovie(Movie movie) {
         iMovieRepository.save(movie);
     }
