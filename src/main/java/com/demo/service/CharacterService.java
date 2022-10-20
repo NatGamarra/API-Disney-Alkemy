@@ -36,6 +36,11 @@ public class CharacterService implements ICharacterService {
     }
 
     @Override
+    public List<Character> findAllCharacters() {
+        return iCharacterRepository.findAll();
+    }
+
+    @Override
     public Character findById(Long id) {
         return iCharacterRepository.findById(id).get();
     }

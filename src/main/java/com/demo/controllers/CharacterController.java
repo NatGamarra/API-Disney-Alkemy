@@ -19,6 +19,11 @@ public class CharacterController {
         return new ResponseEntity<>(iCharacterService.getCharacters(), HttpStatus.OK);
     }
 
+    @GetMapping("/all")
+    public ResponseEntity<?> findAllCharacters(){
+        return new ResponseEntity<>(iCharacterService.findAllCharacters(), HttpStatus.OK);
+    }
+
     //Buscar personaje por id
     @GetMapping("/character/{id}")
     public ResponseEntity<?> findCharacter(@PathVariable Long id) {

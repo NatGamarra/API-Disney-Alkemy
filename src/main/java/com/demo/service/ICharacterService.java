@@ -13,6 +13,8 @@ public interface ICharacterService {
 
     public List<CharacterDTO> getCharacters();
 
+    public List<Character> findAllCharacters();
+
     public Character findById(Long id);
 
     public void deleteCharacter(Long id);
