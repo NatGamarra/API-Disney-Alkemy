@@ -1,5 +1,6 @@
 package com.demo.controllers;
 import com.demo.entities.Character;
+import com.demo.exceptions.RequestException;
 import com.demo.service.ICharacterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -45,6 +46,9 @@ public class CharacterController {
     @PostMapping("/save")
     public ResponseEntity<?> saveCharacter(@RequestBody Character character) {
         iCharacterService.saveCharacter(character);
+        if(character.getName().equals("") || character.getName() == null){
+            throw new RequestException("500", "Name is required");
+        }
         return new ResponseEntity<>(character, HttpStatus.CREATED);
     }
 
