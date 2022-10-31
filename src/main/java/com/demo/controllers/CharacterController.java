@@ -47,7 +47,7 @@ public class CharacterController {
     public ResponseEntity<?> saveCharacter(@RequestBody Character character) {
         iCharacterService.saveCharacter(character);
         if(character.getName().equals("") || character.getName() == null){
-            throw new RequestException("500", "Name is required");
+            throw new RequestException("Name is required","500");
         }
         return new ResponseEntity<>(character, HttpStatus.CREATED);
     }
